@@ -1,0 +1,25 @@
+<!-- <h1>Estas mirando tu perfil
+
+</h1>
+<p>Iniciaste sesión!</p>
+
+<ul *ngIf="auth.user$ | async as user">
+  <li>{{user.name}}</li>
+  <li>{{user.email}}</li>
+</ul>
+ -->
+
+
+<div class="col-12 mb-4" *ngIf="auth.user$ | async as user">
+  <div class="card shadow border-0 text-center p-0">
+    <div class="profile-cover rounded-top" data-background="https://i.postimg.cc/TYzYVLxQ/knowlteck.png" style="background: url('https://i.postimg.cc/TYzYVLxQ/knowlteck.png');"></div>
+    <div class="card-body pb-5">
+      <img src="https://demo.themesberg.com/volt-pro/assets/img/team/profile-picture-1.jpg" class="avatar-xl rounded-circle mx-auto mt-n7 mb-4" width="200px" alt="Neil Portrait">
+      <h4 class="h3">{{user.name}}</h4>
+      <h5 class="fw-normal">{{user.email}}</h5>
+      <p class="text-gray mb-4">Curauma York, CHILE</p>
+      <a class="btn btn-sm btn-gray-800 d-inline-flex align-items-center me-2" href="#">Connect </a>
+      <a class="btn btn-sm btn-secondary" href="#">Send Message</a>
+    </div>
+  </div>
+</div>
